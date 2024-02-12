@@ -1,0 +1,63 @@
+// compress: true
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    
+background-color: #1f1f1f;
+
+margin: 0;
+font-size: 1rem;
+font-weight: 700;
+font-family: 'Montserrat', sans-serif;
+    &.no-scroll {
+        overflow: overlay;
+    }
+}
+
+
+body::-webkit-scrollbar {
+       /* ширина scrollbar */
+       display: none;
+  }
+  body::-webkit-scrollbar-track {
+display: none;
+     /* цвет дорожки */
+  }
+  body::-webkit-scrollbar-thumb {
+    display: none;
+    background-color: rgb(0, 0, 0);    /* цвет плашки */
+    border-radius: 20px;       /* закругления плашки */
+    border: 1px solid rgb(49, 49, 49);  /* padding вокруг плашки */
+  }
+
+
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+p {
+    margin: 0 0 1rem;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+
+@import "bloks/container";
+@import "bloks/logoname";
+@import "bloks/header";
+@import "bloks/section";
+@import "bloks/programmer";
+@import "bloks/portfolio";
+@import "bloks/fon";
+@import "bloks/footer";
+@import "bloks/stages";
+@import "bloks/modal";
+@import "vars";

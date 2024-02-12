@@ -1,0 +1,72 @@
+//main: ../style.less
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+.fons{
+    left: 0;
+    top: 0;
+    
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: cover;
+
+}
+
+
+.fon_container {
+    width: 100%;
+    max-width: 1200px;
+    padding-left: 1rem;
+    padding-right: 1rem ;
+    margin: 300px auto;
+}
+.fon_container p {
+    color: rgb(255, 255, 255);
+    font-size: 5rem;
+    padding: 0.5rem;
+    font-weight: 400;
+    letter-spacing: 0.1rem;
+    
+
+    overflow: hidden;
+}
+.fon_container p span.typed-text {
+    font-weight: 400;
+    color: #33830e;
+}
+.fon_container p span.cursor {
+    display: inline-block;
+    background-color: rgb(141, 252, 14);
+    margin-left: 0.1rem;
+    width: 3px;
+    animation: blink 1s infinite;
+}
+.fon_container p span.cursor.typing {
+    animation: none;
+}
+@keyframes blink {
+    0% {
+        background-color: rgb(165, 0, 0);
+    }
+    49% {
+        background-color: rgb(104, 0, 0);
+    }
+    50% {
+        background-color: transparent;
+    }
+    99% {
+        background-color: transparent;
+    }
+    100% {
+        background-color: rgb(255, 0, 0);
+    }
+}
+
+
+@media (max-width:560px){
+    .fons_video{
+        display: none;
+    }
+}
