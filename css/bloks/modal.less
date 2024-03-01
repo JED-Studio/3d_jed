@@ -1,62 +1,165 @@
 //main: ../style.less
 
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 9999;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    width: 400px;
-    background-color: #1c1c1c;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-    padding: 20px;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    box-shadow: 0px 0px 5px 0px white;
-  }
-  
-  .modal-content {
-    position: relative;
-  }
-  
-  .close {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 30px;
-    cursor: pointer;
-  }
-  
-  .modal-backdrop {
-    display: none;
-    position: fixed;
-    z-index: 9998;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-    opacity: 0;
-    transition: opacity 0.3s ease;
-  }
 
 
-  .modal_form_title{
-    text-align: center;
-    color: white;
-  }
+.buttons__flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.buttons__button {
+  cursor: pointer;
+  color: #fff;
+  background: #3626a7;
+  border-radius: 30px;
+  height: 60px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 32px;
+}
+.buttons__button:not(:last-child) {
+  margin-right: 24px;
+}
 
 
-  .modal_form_item{
-    margin-top: 20px;
-    display: flex;
-    flex-direction: column;
-    color: white;
-  }
+.modal { /* начальные стили */
+  visibility: hidden; /* скрываем модальное окно */
+  opacity: 0; /* делаем прозрачным */
+  position: fixed; /* делаем блок фиксированным */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: block;
+  background: rgba(18,18,18,0.8); /* фон для затемнения */
+  z-index: 9999; /* перекрываем все элементы */
+  transition: visibility 0s 0.25s, opacity 0.25s; /* добавляем для плавного перехода */
+}
+.modal_active { /* активный класс модального окна */
+  opacity: 1; /* убираем прозрачность */
+  visibility: visible; /* отображаем блок модального окна */
+  transition: visibility 0s 0s, opacity 0.25s; /* добавляем для плавного перехода */
+}
+.modal__wrapper { /* блок обертка для центрирования контентной части модального окна */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+.modal__body { /* еще один блок обертка для возможности прокрутки контента, если модальное окно не помещается по высоты */
+  overflow-y: auto; /* добавляем полосу прокрутки при недостаточной высоте */
+  position: relative;
+  margin: 0 24px; /* боковые отступы для мобильных экранов */
+  max-height: 100%;
+  max-width: 900px;
 
-  .modal_form_input{
-    padding: 10px;
-    border-radius: 5px;
-  }
+}
+.modal__body::-webkit-scrollbar { /* скрываем полосу прокрутки */
+  display: none;
+}
+.modal__inner { /* стилизуем контентную часть */
+  display: flex;
+  flex-direction: column;
+  background-color: #1f1f1f;
+  /*width: 100%;*/
+  height: 100%;
+  padding: 64px 24px;
+  align-items: center;
+  color: #fff;
+  border-radius: 10px;
+  position: relative;
+  margin: 24px 0; /* отступы сверху и снизу, чтобы контентная часть модального окна не прилипала к границам браузера при недостаточной высоте */
+
+}
+.modal__close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  cursor: pointer;
+  font-size: 20px;
+  z-index: 99999;
+}
+.modal__title {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1;
+  margin-bottom: 24px;
+}
+.modal__text {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+
+.modal_form_title{
+  text-align: center;
+  color: white;
+}
+
+
+.modal_form_item{
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
+
+.modal_form_input{
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.modal__video{
+  max-width: 900px;
+  width: 100%;
+}
+
+/*Второе модальное окно*/
+
+
+
+.modal__inner1 { /* стилизуем контентную часть */
+  display: flex;
+  flex-direction: column;
+  background-color: #1f1f1f;
+  /*width: 100%;*/
+  height: 100%;
+  align-items: center;
+  color: #fff;
+  border-radius: 10px;
+  position: relative;
+  margin: 24px 0; /* отступы сверху и снизу, чтобы контентная часть модального окна не прилипала к границам браузера при недостаточной высоте */
+}
+
+
+
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.swiper {
+  margin-left: auto;
+  margin-right: auto;
+}
