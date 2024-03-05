@@ -2,18 +2,54 @@
 
 .footer{
     height: 130px;
-    background-color: black;
+   /* background-color: black;*/
 }
 
 
 .footer_flex{
+    margin-top: 90px;
     display: flex;
     justify-content: space-between;
 
 }
 
 .footer_social{
-    color: white;
-text-decoration: none;
+    height: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 8px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 16px;
+    color: rgb(255, 255, 255);
+    
+}
 
+.footer_social::after{
+    content: "";
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 2px;
+    left: 0;
+    bottom: 0;
+    background-color: rgb(255, 255, 255);
+    transition: all ease .3s;
+}
+
+.footer_social:hover, .footer_social:focus-visible {
+    color: #000000
+}
+
+.footer_social:hover svg, .footer_social:hover svg path, .footer_social:focus-visible svg, .footer_social:focus-visible svg path {
+    fill: rgb(0, 0, 0);
+}
+
+
+
+
+.footer_social:hover::after, .footer_social:focus-visible::after {
+    height: 100%
 }
