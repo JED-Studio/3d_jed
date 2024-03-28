@@ -1,4 +1,4 @@
-//Скрипт загружает больше блоков
+
 
 let loadMoreBtn = document.querySelector('#section_load_more');
         let currentItem = 8;

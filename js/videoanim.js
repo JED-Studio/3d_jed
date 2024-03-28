@@ -32,21 +32,21 @@ for (const videoBlock of videoBlocks) {
     video.pause();
   }
 
-  // Add event listener for mouseenter event on the video block
+  
   videoBlock.addEventListener('mouseenter', function() {
-    // Play all of the videos when the mouse enters the video block
+  
     for (const video of videos) {
       video.play();
     }
   });
 
-  // Add event listener for mouse leave event on the video block
+  
   videoBlock.addEventListener('mouseleave', function() {
-    // Pause all of the videos when the mouse leaves the video block
+    
     for (const video of videos) {
       video.pause();
 
-      // Reset all of the videos to the beginning
+  
       video. currentTime = 0;
     }
   });
