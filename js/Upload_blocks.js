@@ -1,4 +1,5 @@
 
+document.addEventListener("DOMContentLoaded", function() {
 
 let loadMoreBtn = document.querySelector('#section_load_more');
         let currentItem = 8;
@@ -10,3 +11,5 @@ let loadMoreBtn = document.querySelector('#section_load_more');
             }
             currentItem += 8;
         }
+
+    });

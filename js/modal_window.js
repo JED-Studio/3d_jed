@@ -1,3 +1,5 @@
+document.addEventListener("DOMContentLoaded", function() {
+
 const openModal = (triggerSelector, modalDataSelector) => { // объявляем функцию открытия модального окна, которая принимает в качестве параметров селекторы кнопки и соответствующего модального окна
   const trigger = document.querySelector(triggerSelector) // ищем кнопку по переданному селектору
   const modal = document.querySelector(modalDataSelector) // ищем модальное окно по переданному селектору
@@ -50,3 +52,5 @@ const closeModal = () => { // объявляем функцию закрытия
   })
 }
 closeModal() 
+
+});

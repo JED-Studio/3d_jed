@@ -21,7 +21,7 @@ document.body.addEventListener('click', function() {
   video.play();
 });
 */
-
+document.addEventListener("DOMContentLoaded", function() {
 
 const videoBlocks = document.querySelectorAll('[id^=block_video]');
 
@@ -51,3 +51,5 @@ for (const videoBlock of videoBlocks) {
     }
   });
 }
+
+});
