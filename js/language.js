@@ -126,6 +126,8 @@ document.addEventListener("DOMContentLoaded", function() {
       button.addEventListener("click", () => {
         const lang = button.dataset.btn;
         changeLang(lang);
+
+        
       });
     });
   });
