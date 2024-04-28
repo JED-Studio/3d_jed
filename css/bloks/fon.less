@@ -2,41 +2,27 @@
 
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
 
-.fons{
-    
-}
-
-.fons_width{
-    left: 0;
-    top: 0;
-    position: relative;
-    
-}
 
 .fons_video{
-    
-    z-index: -100; 
-    width: 100%; 
-    
-     height: auto;
-}
-
-.fon_container {
+    z-index: -112;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 5;
-    position: absolute;
-    
-    padding-top: 30px;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
 }
 
-.koly{
+.fon_container {
+    min-height: 100vh;
     display: flex;
     justify-content: space-between;
-    align-items:center;
-    color:white;
+    align-items: center;
 }
+
+
+
 
 .fon_container p {
     
@@ -49,6 +35,20 @@
 
     overflow: hidden;
 }
+
+@media(max-width:1300px){
+   
+
+}
+@media(max-width:972px){
+   
+
+   
+}
+
+
+
+
 .fon_container p span.typed-text {
     font-weight: 400;
     color: #33830e;
