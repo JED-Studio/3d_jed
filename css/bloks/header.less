@@ -41,6 +41,7 @@
 
 .header_nav{
     display: flex;
+    flex-wrap: wrap;
     color:white;
     font-weight: 400;
     font-size: 15px;
@@ -147,7 +148,13 @@ height: auto;
     background-color: #1f1f1f;
     box-shadow: 0 5px 10px rgba(184, 184, 184, 0.3);
     text-align: center;
+    display: none;
+
+    &.show {
+        display: flex;
+    }
      }
+
 
      .header_nav_link{
         margin-left: 0px;
@@ -157,4 +164,6 @@ height: auto;
         margin-left: 0px;
      }
 }
+
+
 
