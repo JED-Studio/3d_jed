@@ -92,21 +92,7 @@ document.addEventListener("DOMContentLoaded", function() {
         ru: "ВСЕ РАБОТЫ",
         en: "ALL WORKS"
       },
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    };
+ };
 
     function changeLang(lang) {
       currentLang = lang;
@@ -130,6 +116,10 @@ document.addEventListener("DOMContentLoaded", function() {
         
       });
     });
+
+
+
+   
   });
 
 
