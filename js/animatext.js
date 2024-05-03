@@ -41,3 +41,5 @@ function erase() {
 document.addEventListener("DOMContentLoaded", function () {
     if (textArray.length) setTimeout(type, newTextDelay + 250);
 });
+
+//<p>Создам<br>3D-motion<br> <span class="typed-text"></span><span class="cursor">&nbsp;</span></p>

@@ -92,6 +92,14 @@ document.addEventListener("DOMContentLoaded", function() {
         ru: "ВСЕ РАБОТЫ",
         en: "ALL WORKS"
       },
+      "home_page-22": {
+        ru: "Создам",
+        en: "I'll create"
+      },
+      "home_page-23": {
+        ru: "дизайн",
+        en: "design"
+      },
  };
 
     function changeLang(lang) {
