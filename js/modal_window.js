@@ -48,9 +48,17 @@ const closeModal = () => { // объявляем функцию закрытия
         el.classList.remove('modal_active') // то тоже скрываем модальное окно, удаляя активный класс
         document.body.style.overflow = 'auto';
       }
+      if (e.target.classList.contains('modal_active')) {
+        document.querySelector('modal__video').pause();
+      }
     })
   })
 }
-closeModal() 
+closeModal()
+
+
+
 
 });
+
+
